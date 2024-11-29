@@ -1,101 +1,127 @@
-import Image from "next/image";
+// const Home = () => {
+//   return(
+//     <div>
+//      <center><h1 id ="text-center items-center text-black">Welcome to Calculate Me!</h1></center>
+//      <div className="flex justify-center">
+//     <div className="flex justify-center bg-gradient-to-r from-pink-500/50 to-pink-600 w-[350px] h-[490px] rounded-lg mt-20 scale-125">
+//     <div  id="row" className="mt-4">
+//         <input  id="input" className="border-solid opacity-70 border-[1px] border-yellow-100 rounded-lg" type="text"/>
+//         <center><div className="w-[300px] h-[1px] mb-1 bg-white opacity-50"/></center>
+//         <div  id="row">
+//             <div  id ="row">
+//                 <button className="border-solid opacity-70 border-[1px] border-yellow-100 rounded-lg" id="button">C</button>
+//                 <button className="border-solid opacity-70 border-[1px] border-yellow-100 rounded-lg" id="button">%</button>
+//                 <button className="border-solid opacity-70 border-[1px] border-yellow-100 rounded-lg" id="button">M+</button>
+//                 <button className="border-solid opacity-70 border-[1px] border-yellow-100 rounded-lg" id="button">M-</button>
+//             </div>
+//             <div   id ="row">
+//             <button className="border-solid opacity-70 border-[1px] border-yellow-100 rounded-lg" id="button">7</button>
+//             <button className="border-solid opacity-70 border-[1px] border-yellow-100 rounded-lg" id="button">8</button>
+//             <button className="border-solid opacity-70 border-[1px] border-yellow-100 rounded-lg" id="button">9</button>
+//             <button className="border-solid opacity-70 border-[1px] border-yellow-100 rounded-lg" id="button">/</button>
+//         </div>
+//         <div   id="row">
+//             <button className="border-solid opacity-70 border-[1px] border-yellow-100 rounded-lg" id="button">4</button>
+//             <button className="border-solid opacity-70 border-[1px] border-yellow-100 rounded-lg" id="button">5</button>
+//             <button className="border-solid opacity-70 border-[1px] border-yellow-100 rounded-lg" id="button">6</button>
+//             <button className="border-solid opacity-70 border-[1px] border-yellow-100 rounded-lg" id="button">*</button>
+//         </div>
+//         <div id ="row">
+//             <button className="border-solid opacity-70 border-[1px] border-yellow-100 rounded-lg" id="button">1</button>
+//             <button className="border-solid opacity-70 border-[1px] border-yellow-100 rounded-lg" id="button">2</button>
+//             <button className="border-solid opacity-70 border-[1px] border-yellow-100 rounded-lg" id="button">3</button>
+//             <button className="border-solid opacity-70 border-[1px] border-yellow-100 rounded-lg" id="button">+</button>
+//         </div>
+//         <div  id ="row">
+//             <button className="border-solid opacity-70 border-[1px] border-yellow-100 rounded-lg" id="button">0</button>
+//             <button className="border-solid opacity-70 border-[1px] border-yellow-100 rounded-lg" id="button">=</button>
+//             <button className="border-solid opacity-70 border-[1px] border-yellow-100 rounded-lg" id="button">.</button>
+//             <button className="border-solid opacity-70 border-[1px] border-yellow-100 rounded-lg" id="button">-</button>
+//         </div>
+//     </div>
+//     </div>
+//     </div>
+//     </div>
+//     </div>
+//   )
+// }
 
-export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+// export default Home;
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+
+"use client"
+import React, { useState } from 'react';
+import coder from "@/app/Public/coder.jpg"
+import Image from 'next/image';
+
+const Home = () => {
+    const [expression, setExpression] = useState<string>("");
+
+    const handleClick = (value: string) => {
+        if (value === '=') {
+            try {
+                const result = eval(expression); // Caution: Use a safer alternative in production
+                setExpression(result.toString());
+            } catch (error) {
+                console.error("Error evaluating the expression", error);
+                setExpression("Error");
+            }
+        } else if (value === 'C') {
+            setExpression("");
+        } else {
+            setExpression(expression + value);
+        }
+    };
+ 
+    return (
+        <div
+              className="bg-cover bg-center w-full h-screen opacity-70"
+              style={{ backgroundImage: `url(${coder.src})`}}>
+                <div>
+            <center>
+                <div className='bg-gradient-to-r from-[#b8cbb8]  via-[#cf6cc9] to-[#ee609c] w-[700px] rounded-lg py-10'><h1 className="text-center text-6xl font-black text-white">Welcome to Calculate Me!</h1></div>
+            </center>
+            <div className="flex justify-center">
+                <div className="flex justify-center bg-gradient-to-r from-[#b8cbb8]  via-[#cf6cc9] to-[#ee609c] w-[350px] h-[520px] rounded-lg mt-40 scale-125">
+                    <div id="row" className="mt-8">
+                        {/* Display the expression */}
+                        <input
+                            id="input"
+                            className="border-solid border-[1px] border-yellow-100 rounded-lg w-full p-5 mb-4 text-left text-gray-900 text-xl"
+                            type="text"
+                            value={expression}
+                            readOnly
+                        />
+                        <center>
+                            <div className="w-[300px] h-[1px] bg-white opacity-50" />
+                        </center>
+                        <div id="row" className="space-y-6 mt-5">
+                            {[
+                                ['C', '%', 'M+', 'M-'],
+                                ['7', '8', '9', '/'],
+                                ['4', '5', '6', '*'],
+                                ['1', '2', '3', '+'],
+                                ['0', '=', '.', '-'],
+                            ].map((row, rowIndex) => (
+                                <div key={rowIndex} className="flex justify-center space-x-6">
+                                    {row.map((button) => (
+                                        <button
+                                            key={button}
+                                            className="border-solid border-[1px] border-yellow-100 opacity-90 rounded-lg h-5 w-5 py-10 px-10 bg-gradient-to-r from-pink-400 to-purple-400 text-center text-2xl hover:bg-gradient-to-r hover:from-red-400 hover:to-blue-400"
+                                            onClick={() => handleClick(button)}
+                                        >
+                                            {button}
+                                        </button>
+                                    ))}
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
     </div>
-  );
-}
+    );
+};
+
+export default Home;
