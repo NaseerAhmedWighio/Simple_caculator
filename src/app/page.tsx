@@ -1,58 +1,6 @@
-// const Home = () => {
-//   return(
-//     <div>
-//      <center><h1 id ="text-center items-center text-black">Welcome to Calculate Me!</h1></center>
-//      <div className="flex justify-center">
-//     <div className="flex justify-center bg-gradient-to-r from-pink-500/50 to-pink-600 w-[350px] h-[490px] rounded-lg mt-20 scale-125">
-//     <div  id="row" className="mt-4">
-//         <input  id="input" className="border-solid opacity-70 border-[1px] border-yellow-100 rounded-lg" type="text"/>
-//         <center><div className="w-[300px] h-[1px] mb-1 bg-white opacity-50"/></center>
-//         <div  id="row">
-//             <div  id ="row">
-//                 <button className="border-solid opacity-70 border-[1px] border-yellow-100 rounded-lg" id="button">C</button>
-//                 <button className="border-solid opacity-70 border-[1px] border-yellow-100 rounded-lg" id="button">%</button>
-//                 <button className="border-solid opacity-70 border-[1px] border-yellow-100 rounded-lg" id="button">M+</button>
-//                 <button className="border-solid opacity-70 border-[1px] border-yellow-100 rounded-lg" id="button">M-</button>
-//             </div>
-//             <div   id ="row">
-//             <button className="border-solid opacity-70 border-[1px] border-yellow-100 rounded-lg" id="button">7</button>
-//             <button className="border-solid opacity-70 border-[1px] border-yellow-100 rounded-lg" id="button">8</button>
-//             <button className="border-solid opacity-70 border-[1px] border-yellow-100 rounded-lg" id="button">9</button>
-//             <button className="border-solid opacity-70 border-[1px] border-yellow-100 rounded-lg" id="button">/</button>
-//         </div>
-//         <div   id="row">
-//             <button className="border-solid opacity-70 border-[1px] border-yellow-100 rounded-lg" id="button">4</button>
-//             <button className="border-solid opacity-70 border-[1px] border-yellow-100 rounded-lg" id="button">5</button>
-//             <button className="border-solid opacity-70 border-[1px] border-yellow-100 rounded-lg" id="button">6</button>
-//             <button className="border-solid opacity-70 border-[1px] border-yellow-100 rounded-lg" id="button">*</button>
-//         </div>
-//         <div id ="row">
-//             <button className="border-solid opacity-70 border-[1px] border-yellow-100 rounded-lg" id="button">1</button>
-//             <button className="border-solid opacity-70 border-[1px] border-yellow-100 rounded-lg" id="button">2</button>
-//             <button className="border-solid opacity-70 border-[1px] border-yellow-100 rounded-lg" id="button">3</button>
-//             <button className="border-solid opacity-70 border-[1px] border-yellow-100 rounded-lg" id="button">+</button>
-//         </div>
-//         <div  id ="row">
-//             <button className="border-solid opacity-70 border-[1px] border-yellow-100 rounded-lg" id="button">0</button>
-//             <button className="border-solid opacity-70 border-[1px] border-yellow-100 rounded-lg" id="button">=</button>
-//             <button className="border-solid opacity-70 border-[1px] border-yellow-100 rounded-lg" id="button">.</button>
-//             <button className="border-solid opacity-70 border-[1px] border-yellow-100 rounded-lg" id="button">-</button>
-//         </div>
-//     </div>
-//     </div>
-//     </div>
-//     </div>
-//     </div>
-//   )
-// }
-
-// export default Home;
-
-
 "use client"
 import React, { useState } from 'react';
 import coder from "@/app/Public/coder.jpg"
-import Image from 'next/image';
 
 const Home = () => {
     const [expression, setExpression] = useState<string>("");
