@@ -25,12 +25,12 @@ const Home = () => {
         <div
               className="bg-cover bg-center w-full h-screen opacity-70"
               style={{ backgroundImage: `url(${coder.src})`}}>
-                <div className='scale-75'>
+                <div className=''>
             <center>
                 <div className='bg-gradient-to-r from-[#b8cbb8]  via-[#cf6cc9] to-[#ee609c] w-[700px] rounded-lg py-10'><h1 className="text-center text-6xl font-black text-white">Welcome to Calculate Me!</h1></div>
             </center>
             <div className="flex justify-center">
-                <div className="flex justify-center bg-gradient-to-r from-[#b8cbb8]  via-[#cf6cc9] to-[#ee609c] w-[350px] h-[520px] rounded-lg mt-40 scale-125">
+                <div className="flex justify-center bg-gradient-to-r from-[#b8cbb8]  via-[#cf6cc9] to-[#ee609c] w-[350px] h-[520px] rounded-lg mt-32">
                     <div id="row" className="mt-8">
                         {/* Display the expression */}
                         <input
