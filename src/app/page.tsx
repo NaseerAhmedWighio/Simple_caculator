@@ -25,7 +25,7 @@ const Home = () => {
         <div
               className="bg-cover bg-center w-full h-screen opacity-70"
               style={{ backgroundImage: `url(${coder.src})`}}>
-                <div>
+                <div className='scale-75'>
             <center>
                 <div className='bg-gradient-to-r from-[#b8cbb8]  via-[#cf6cc9] to-[#ee609c] w-[700px] rounded-lg py-10'><h1 className="text-center text-6xl font-black text-white">Welcome to Calculate Me!</h1></div>
             </center>
